@@ -1,5 +1,4 @@
 import React from 'react';
-import './Field.scss';
 import Line from '../Line/Line';
 import WhooWin from '../../logics/WhooWin.js';
 
