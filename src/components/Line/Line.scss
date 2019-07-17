@@ -1,0 +1,49 @@
+.line{
+  position: relative;
+  display: inline-block;
+  top: 170px;
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  transform: rotateX(180deg);
+
+  &.inactive{
+    pointer-events: none;
+  }
+
+  &:hover{
+    .point_state-active{
+      border-color: black;
+      &.active{
+        &-u1{
+          background-color: rgba(255, 0, 0, 0.3);
+        }
+        &-u2{
+          background-color: rgba(0, 0, 255, 0.3);
+        }
+      }
+    }
+  }
+
+  .point{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px auto;
+    border: 2px solid transparent;
+    &_state{
+      &-0,
+      &-active{
+        background-color: #a8e5ae;
+      }
+      &-u1{
+        background-color: rgba(255, 0, 0, 0.5);
+        border-color: red;
+      }
+      &-u2{
+        background-color: rgba(0, 0, 255, 0.5);
+        border-color: blue;
+      }
+    }
+  }
+}

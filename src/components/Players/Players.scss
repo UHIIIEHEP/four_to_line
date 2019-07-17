@@ -1,0 +1,28 @@
+.player{
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  width: 30%;
+  height: 150px;
+  line-height: 150px;
+  transition: .3s;
+  font-size: 36px;
+  border: 1px solid transparent;
+
+  &-0{
+    left: 0px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-color: red;
+    border-radius: 5px;
+  }
+  &-1{
+    right: 0px;
+    background-color: rgba(0, 0, 255, 0.5);
+    border-color: blue;
+    border-radius: 5px;
+  }
+  &_active{
+    transition: .3s;
+    width: 65%;
+  }
+}
