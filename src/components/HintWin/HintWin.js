@@ -18,6 +18,12 @@ class HintWin extends React.Component{
     if(this.props.whooWin === 'friends'){
       this.text = 'Победила ДРУЖБА'
     }
+    if(this.props.whooWin === 'u1'){
+      this.text = 'Победитель U1'
+    }
+    if(this.props.whooWin === 'u2'){
+      this.text = 'Победитель U2'
+    }
     return (
       <div
         className={`hintWin hintWin-${this.props.whooWin}`}>
