@@ -7,8 +7,8 @@ export default function(value){
     if(sheck(newValue) === 'none'){
       /* Проверка на ничью */
       let all = 0;
-      value.forEach((val, index) => {
-        function filterVal(element, index, array) {
+      value.forEach((val) => {
+        function filterVal(element) {
           return element === 0;
         }
         all += val.some(filterVal);
@@ -49,7 +49,6 @@ function sheck(arr) {
 }
 
 function rotateArr (oldArr) {
-  // let heightArr = oldArr[0].length;
   let widthArr = oldArr.length;
   let newArr = [];
 
