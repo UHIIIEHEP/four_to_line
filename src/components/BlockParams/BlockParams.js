@@ -1,5 +1,5 @@
 import React from 'react';
-import Line from './BlockParams.scss';
+import './BlockParams.scss';
 import BlockInput from '../BlockInput/BlockInput';
 
 class BlockParams extends React.Component{

@@ -38,11 +38,16 @@ class App extends React.Component{
     return (
       <div className="App">
         <BlockParams objParams={this.objParams}/>
-        <Players users = {this.state.activeFirstPlayer} username = {this.state.params}/>
+        <Players 
+          users = {this.state.activeFirstPlayer}
+          username = {this.state.params}/>
         <Field
           users = {this.state.activeFirstPlayer}
           updatePlayersField = {this.updatePlayers}/>
-        <HintWin whooWin={this.state.whooWin} restartGameHint = {this.restartGameApp}/>
+        <HintWin
+          whooWin={this.state.whooWin}
+          restartGameHint = {this.restartGameApp}
+          username = {this.state.params}/>
       </div>
     );
   }

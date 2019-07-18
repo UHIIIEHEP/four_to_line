@@ -15,14 +15,12 @@ class HintWin extends React.Component{
   }
 
   render(){
-    if(this.props.whooWin === 'friends'){
-      this.text = 'Победила ДРУЖБА'
-    }
-    if(this.props.whooWin === 'u1'){
-      this.text = 'Победитель U1'
-    }
-    if(this.props.whooWin === 'u2'){
-      this.text = 'Победитель U2'
+    if(this.props.whooWin !== 'none'){
+      if(this.props.whooWin === 'friends'){
+        this.text = 'Победила ДРУЖБА'
+      }else{
+        this.text = `Победитель ${this.props.username[this.props.whooWin]}`
+      }
     }
     return (
       <div

@@ -1,5 +1,5 @@
 import React from 'react';
-import Line from './BlockInput.scss';
+import './BlockInput.scss';
 
 class BlockInput extends React.Component{
   constructor(props){
