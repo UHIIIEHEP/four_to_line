@@ -25,8 +25,6 @@ class Field extends React.Component{
   }
 
   restartField = () => {
-    // console.log(this.arrLine);
-    // this.refs.line.restartLine();
     this.componentsArray.forEach((elem, index)=>{      
     this.refs[`line-${index}`].restartLine();
     })
