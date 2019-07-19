@@ -24,6 +24,8 @@ class App extends React.Component{
 
   restartGameApp = (value) => {
     console.log('Здесь должна быть перезагрузка :-(')
+    this.setState({whooWin: 'none', activeFirstPlayer: true})
+    this.refs.field.restartField();
   }
 
   objParams = (value) => {
@@ -42,6 +44,7 @@ class App extends React.Component{
           users = {this.state.activeFirstPlayer}
           username = {this.state.params}/>
         <Field
+          ref = 'field'
           users = {this.state.activeFirstPlayer}
           updatePlayersField = {this.updatePlayers}/>
         <HintWin

@@ -24,12 +24,22 @@ class Field extends React.Component{
     this.componentsArray[index] = value;
   }
 
+  restartField = () => {
+    // console.log(this.arrLine);
+    // this.refs.line.restartLine();
+    this.componentsArray.forEach((elem, index)=>{      
+    this.refs[`line-${index}`].restartLine();
+    })
+  }
+
+
   render(){
     return (
       <div className='field' rendered = {this.state.restarts}>
-        {this.componentsArray.map( (elem, index) => {
+        {this.arrLine = this.componentsArray.map( (elem, index) => {
           return (
             <Line
+              ref = {`line-${index}`}
               users = {this.props.users}
               size = {this.state.fieldSize.height}
               updatePlayers = {this.returnFieldPlayers}

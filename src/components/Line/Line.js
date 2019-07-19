@@ -28,6 +28,13 @@ class Line extends React.Component{
     }
   }
 
+  restartLine = () => {
+    let componentsLineArray = new Array(this.props.size);
+    componentsLineArray.fill(0);
+    this.setState({arrStatus: componentsLineArray, currentElement: 0});
+    this.setState({active: 'active'})
+  }
+
   render(){
     this.firstElem = true;
       this.props.returnArr(this.state.arrStatus, this.props.index);
